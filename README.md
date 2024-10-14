@@ -1,8 +1,8 @@
-### BIENVENIDOS
+# BIENVENIDOS
 
 Gracias por darme esta oportunidad. disfrute mucho el desafio!
 
-### Que utilice?
+# Que utilice?
 
 - React + Typescript
 - Express.js en Node.js + Typescript
@@ -11,9 +11,9 @@ Gracias por darme esta oportunidad. disfrute mucho el desafio!
 - Jest
 - Vitest
 
-### Como inicializar la app:
+# Como inicializar la app:
 
-# Backend
+##### Backend
 
 0. Crear un .env en la carpeta backend que contenga:
    - 'FRONTEND_URL=http://localhost:5173' (es importante NO utilizar la "/" al final por CORS)
@@ -22,7 +22,7 @@ Gracias por darme esta oportunidad. disfrute mucho el desafio!
 2. npm i
 3. npx nodemon src/server.ts
 
-# Frontend
+##### Frontend
 
 1. Crear un .env en la carpeta frontend que contenga:
    - 'VITE_URL=http://localhost:3000'
