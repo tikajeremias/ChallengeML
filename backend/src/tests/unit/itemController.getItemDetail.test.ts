@@ -66,7 +66,7 @@ describe('getItemDetail', () => {
                     decimals: 0
                 },
                 picture: 'https://example.com/image.jpg',
-                condition: 'new',
+                condition: 'Nuevo',
                 free_shipping: true,
                 sold_quantity: 5,
                 description: 'This is a test item description.'
