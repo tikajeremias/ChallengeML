@@ -1,0 +1,16 @@
+.breadcrumb 
+  display: flex
+  justify-content: start
+  align-items: center
+  list-style: none
+  padding: 0px
+  margin: 0px
+  color: #494949
+.breadcrumb-item 
+  margin-right: 8px
+  font-size: 0.75rem
+.breadcrumb-item::after 
+  content: '>'
+  margin-left: 8px
+.breadcrumb-item:last-child::after 
+  content: ''

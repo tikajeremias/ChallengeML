@@ -1,0 +1,113 @@
+<div class="product-detail-container">
+  <nav class="breadcrumb">
+    <ol class="breadcrumb">
+      <% breadcrumbCategories.forEach(category=> { %>
+        <li class="breadcrumb-item">
+          <%= category %>
+        </li>
+        <% }) %>
+        <% if (breadcrumbProduct) { %>
+          <p class="breadcrumb-product"><%= breadcrumbProduct %></p>
+        <% } %>
+    </ol>
+  </nav>
+  <div class="product-container">
+    <div class="product-content">
+      <img alt="product-image" src=<%= product.picture %> />
+      <div class="content-info">
+        <p><%= product.condition%></p>
+        <h1><%= product.title %></h1>
+        <p>$<%= product.price.amount%></p>
+        <button class="buy-button">Comprar</button>
+      </div>
+    </div>
+    <h2>Descripción del producto</h2>
+    <p><%= product.description %></p>
+  </div>
+</div>
+</div>
+
+<style>
+.product-detail-container {
+  height: auto;
+  padding: 10px 15%;
+  display: flex;
+  flex-direction: column;
+}
+.product-container {
+    background: #fff;
+    padding: 35px;
+    border-radius: 6px;
+}
+.product-content {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.content-info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.product-content img {
+  width: 60%;
+  height: 50vh;
+  background-size: contain;
+  background-clip: content-box;
+  object-fit: contain;
+}
+p {
+  font-size: 1rem;
+  color: #494949;
+  margin: 0px;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 25px 0px;
+}
+h1 {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+.buy-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: #3483fa; 
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, transform 0.2s;
+}
+.buy-button:hover {
+  background-color: #2065ce;
+  transform: translateY(-2px);
+}
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  color: #494949;
+  }
+.breadcrumb-item {
+  margin-right: 8px;
+  font-size: 0.75rem;
+}
+.breadcrumb-item::after {
+  content: '>';
+  margin-left: 8px;
+}
+.breadcrumb-item:last-child::after {
+  content: '';
+}
+.breadcrumb-product {
+  font-size: 0.75rem;
+}
+</style>
